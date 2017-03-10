@@ -13,7 +13,7 @@ import {ActivatedRoute} from '@angular/router';
 export class ArtistComponent implements OnInit {
   id:string;
   artist:Artist[];
-  album:Album[];
+  albums:Album[];
   constructor(private _spotifService:SpotifyService,
               private route:ActivatedRoute) { }
 
@@ -21,7 +21,12 @@ export class ArtistComponent implements OnInit {
     this.route.params.map(params=>params['id']).subscribe(id=>{
       this._spotifService.getArtist(id).subscribe(artist=>{
         this.artist=artist;
-      });
+      })
+
+      this._spotifService.getAlbums(id).subscribe(albums=>{
+        this.albums=albums.items;
+      })
+
     });
   }
 

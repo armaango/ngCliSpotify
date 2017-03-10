@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.artist-header{
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: solid 1px #333;
+}
+
+.artist-thumb {
+    width :80px;
+    height:auto;
+    float:left;
+    margin-right: 10px;
+}
