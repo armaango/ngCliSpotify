@@ -15,6 +15,9 @@
           <h4>
             {{res.name}}
           </h4>
+          <div *ngIf="res.genres.length>0">
+            <strong>Genres: </strong>
+            <span *ngFor="let genre of res.genres">{{genre}}</span>
         </div>
       </div>
     </div>
