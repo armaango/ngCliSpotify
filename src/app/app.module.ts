@@ -8,7 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchComponent } from './components/search/search.component';
 import { AboutComponent } from './components/about/about.component';
 
-
+import {SpotifyService} from './services/spotify.service';
 const appRoutes:Routes = [
   {path:'',component:SearchComponent},
   {path:'about',component:AboutComponent}
@@ -28,7 +28,7 @@ const appRoutes:Routes = [
     RouterModule.forRoot(appRoutes)
 
   ],
-  providers: [],
+  providers: [SpotifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

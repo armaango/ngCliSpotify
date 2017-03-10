@@ -1,3 +1,7 @@
-<p>
-  search works!
-</p>
+<h1>Look for Music</h1>
+<p class="lead">use the ngCLISpotify app to browse new music</p>
+
+<form>
+  <div class="form-group">
+    <input type="text" name="searchStr" [(ngModel)]="searchStr" class="form-control" (keyup)="searchMusic()" placeholder="Search Music..">
+  </div>
