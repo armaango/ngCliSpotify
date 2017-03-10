@@ -13,7 +13,7 @@
       <div class="col-md-12">
         <div class="search-res well">
           <h4>
-            {{res.name}}
+           <a routerLink = "/artist/{{res.id}}"> {{res.name}}</a>
           </h4>
           <div *ngIf="res.genres.length>0">
             <strong>Genres: </strong>

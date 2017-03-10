@@ -9,9 +9,11 @@ import { SearchComponent } from './components/search/search.component';
 import { AboutComponent } from './components/about/about.component';
 
 import {SpotifyService} from './services/spotify.service';
+import { ArtistComponent } from './components/artist/artist.component';
 const appRoutes:Routes = [
   {path:'',component:SearchComponent},
-  {path:'about',component:AboutComponent}
+  {path:'about',component:AboutComponent},
+  {path:'artist/:id',component:ArtistComponent}
 ]
 
 @NgModule({
@@ -19,7 +21,8 @@ const appRoutes:Routes = [
     AppComponent,
     NavbarComponent,
     SearchComponent,
-    AboutComponent
+    AboutComponent,
+    ArtistComponent
   ],
   imports: [
     BrowserModule,
